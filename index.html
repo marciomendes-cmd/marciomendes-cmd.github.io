@@ -1,16 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cyber Neural Interface</title>
-    <script type="module" crossorigin src="./assets/index-BIbgYJQ-.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Bc94mioy.css">
-  </head>
-  <body>
-  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber Neural Interface</title>
+  <script type="module" crossorigin src="./assets/index-BIbgYJQ-.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Bc94mioy.css">
+</head>
+<body>
+  <div id="root"></div>
 
-    <div id="root"></div>
+  <!-- Força scroll para o topo após o carregamento (resolve a maioria dos casos de auto-scroll para baixo) -->
+  <script>
+    // Opção 1: Roda uma vez depois que a página carrega completamente
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
 
-  </body>
+        // Desativa a restauração automática de posição (comum em SPAs)
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+      }, 150); // pequeno delay ajuda quando o scroll acontece depois do React montar
+    }, { once: true });
+
+    // Opção 2: Mais agressiva – força várias vezes no início (útil se o scroll for em loop ou useEffect)
+    function forceScrollTop() {
+      window.scrollTo(0, 0);
+      if (window.pageYOffset > 20) {
+        requestAnimationFrame(forceScrollTop);
+      }
+    }
+    requestAnimationFrame(forceScrollTop);
+  </script>
+</body>
 </html>
