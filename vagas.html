@@ -1,0 +1,751 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Oportunidades em Cibersegurança: Pentester Jr. e Threat Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'editorial': {
+                            'cyan': '#06b6d4',
+                            'indigo': '#4338ca',
+                            'slate': '#475569',
+                            'charcoal': '#1e293b',
+                            'accent': '#0ea5e9'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+  <base target="_blank">
+</head>
+
+  <body class="bg-gray-50 text-editorial-charcoal font-sans overflow-x-hidden">
+    <!-- Fixed Table of Contents -->
+    <nav id="toc" class="fixed left-0 top-0 h-screen w-64 bg-white border-r border-gray-200 overflow-y-auto z-40 transform -translate-x-full lg:translate-x-0 transition-transform duration-300">
+      <div class="p-6">
+        <h3 class="text-sm font-semibold text-editorial-slate uppercase tracking-wider mb-4">Índice</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="#hero" class="block py-2 px-3 text-editorial-slate hover:text-editorial-indigo hover:bg-gray-50 rounded transition-colors">Oportunidades em Destaque</a>
+          </li>
+          <li>
+            <a href="#executive-summary" class="block py-2 px-3 text-editorial-slate hover:text-editorial-indigo hover:bg-gray-50 rounded transition-colors">Resumo Executivo</a>
+          </li>
+          <li>
+            <a href="#pentester-it4us" class="block py-2 px-3 text-editorial-slate hover:text-editorial-indigo hover:bg-gray-50 rounded transition-colors">Pentester Jr. - IT4US</a>
+          </li>
+          <li>
+            <a href="#pentester-solyd" class="block py-2 px-3 text-editorial-slate hover:text-editorial-indigo hover:bg-gray-50 rounded transition-colors">Pentester Jr. - Solyd</a>
+          </li>
+          <li>
+            <a href="#threat-intelligence" class="block py-2 px-3 text-editorial-slate hover:text-editorial-indigo hover:bg-gray-50 rounded transition-colors">Threat Intelligence - CTC</a>
+          </li>
+          <li>
+            <a href="#market-analysis" class="block py-2 px-3 text-editorial-slate hover:text-editorial-indigo hover:bg-gray-50 rounded transition-colors">Análise do Mercado</a>
+          </li>
+          <li>
+            <a href="#application-guide" class="block py-2 px-3 text-editorial-slate hover:text-editorial-indigo hover:bg-gray-50 rounded transition-colors">Guia de Candidatura</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Mobile TOC Toggle -->
+    <button id="toc-toggle" class="lg:hidden fixed top-4 left-4 z-50 bg-white p-3 rounded-full shadow-lg">
+      <i class="fas fa-bars text-editorial-charcoal"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="lg:ml-64">
+      <!-- Hero Section -->
+      <section id="hero" class="relative bg-editorial-charcoal text-white">
+        <div class="absolute inset-0 opacity-10">
+          <img src="https://kimi-web-img.moonshot.cn/img/images.pexels.com/eb2493fa5f877660aac3491d0ee958312f043fee.jpeg" alt="Cybersecurity specialist working in a dark room with multiple monitors displaying code" class="w-full h-full object-cover" size="wallpaper" aspect="wide" style="photo" query="cybersecurity professional working in dark room with multiple monitors" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-16">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 class="font-serif text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                <span class="italic text-editorial-cyan">Oportunidades</span> em Cibersegurança
+              </h1>
+              <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                Três posições remotas para iniciar sua carreira em segurança ofensiva e inteligência de ameaças no Brasil
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <div class="bg-editorial-indigo bg-opacity-20 px-4 py-2 rounded-full">
+                  <span class="text-sm font-medium">100% Remoto</span>
+                </div>
+                <div class="bg-editorial-cyan bg-opacity-20 px-4 py-2 rounded-full">
+                  <span class="text-sm font-medium">Nível Júnior</span>
+                </div>
+                <div class="bg-editorial-accent bg-opacity-20 px-4 py-2 rounded-full">
+                  <span class="text-sm font-medium">Brasil</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 gap-6">
+              <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg">
+                <h3 class="text-lg font-semibold mb-2 text-editorial-cyan">2 Vagas Pentester Jr.</h3>
+                <p class="text-sm text-gray-300">IT4US e Solyd Offensive Security</p>
+              </div>
+              <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg">
+                <h3 class="text-lg font-semibold mb-2 text-editorial-cyan">1 Vaga Threat Intelligence</h3>
+                <p class="text-sm text-gray-300">Cyber Threat Control (CTC)</p>
+              </div>
+              <div class="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-lg">
+                <h3 class="text-lg font-semibold mb-2 text-editorial-cyan">Faixa Salarial</h3>
+                <p class="text-sm text-gray-300">R$ 2.000-5.000 mensais</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Executive Summary -->
+      <section id="executive-summary" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 md:px-8">
+          <h2 class="font-serif text-3xl font-bold mb-8 text-editorial-charcoal">Resumo Executivo</h2>
+          <div class="prose prose-lg max-w-none">
+            <p class="text-xl text-editorial-slate mb-6 leading-relaxed">
+              O cenário de cibersegurança brasileiro apresenta oportunidades significativas para profissionais em início de carreira, com três vagas remotas recentemente identificadas em posições de Pentester Jr. e Junior Threat Intelligence Analyst.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 my-8">
+              <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <div class="text-3xl font-bold text-editorial-indigo mb-2">2</div>
+                <div class="text-sm text-editorial-slate">Vagas de Pentester Jr.</div>
+              </div>
+              <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <div class="text-3xl font-bold text-editorial-cyan mb-2">1</div>
+                <div class="text-sm text-editorial-slate">Vaga de Threat Intelligence</div>
+              </div>
+              <div class="text-center p-6 bg-gray-50 rounded-lg">
+                <div class="text-3xl font-bold text-editorial-accent mb-2">100%</div>
+                <div class="text-sm text-editorial-slate">Remoto Nacional</div>
+              </div>
+            </div>
+            <p class="text-editorial-slate leading-relaxed">
+              As oportunidades combinam oferta salarial competitiva (entre R$ 2.000 e R$ 5.000 mensais em regime PJ), benefícios abrangentes e possibilidades de desenvolvimento profissional em organizações com histórico consolidado no mercado brasileiro.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- IT4US Pentester Position -->
+      <section id="pentester-it4us" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+          <div class="flex items-center mb-8">
+            <div class="w-16 h-16 bg-editorial-indigo rounded-full flex items-center justify-center mr-6">
+              <i class="fas fa-shield-alt text-white text-2xl"></i>
+            </div>
+            <div>
+              <h2 class="font-serif text-3xl font-bold text-editorial-charcoal">Pentester Júnior - IT4US Cyber Security</h2>
+              <p class="text-editorial-slate">Mais de 10 anos de experiência em operações SOC e segurança da informação</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-editorial-charcoal">Detalhes da Posição</h3>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <i class="fas fa-home text-editorial-cyan mr-3"></i>
+                  <span><strong>Modalidade:</strong> 100% remoto (home office)</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-map-marker-alt text-editorial-cyan mr-3"></i>
+                  <span><strong>Abrangência:</strong> Todo o território nacional</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-file-contract text-editorial-cyan mr-3"></i>
+                  <span><strong>Contrato:</strong> PJ com possibilidade de conversão para CLT</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-dollar-sign text-editorial-cyan mr-3"></i>
+                  <span><strong>Remuneração:</strong> R$ 2.000,00 a R$ 5.000,00 mensais</span>
+                </div>
+              </div>
+
+              <h3 class="text-xl font-semibold my-6 text-editorial-charcoal">Benefícios Oferecidos</h3>
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <ul class="space-y-3 text-editorial-slate">
+                  <li class="flex items-start">
+                    <i class="fas fa-heartbeat text-red-500 mr-3 mt-1"></i>
+                    <span>Plano de saúde e odontológico</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-utensils text-green-500 mr-3 mt-1"></i>
+                    <span>Vale-alimentação e vale-transporte</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-graduation-cap text-blue-500 mr-3 mt-1"></i>
+                    <span>Auxílio educação e incentivo a certificações</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-clock text-purple-500 mr-3 mt-1"></i>
+                    <span>Flexibilidade de horário</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-chart-line text-orange-500 mr-3 mt-1"></i>
+                    <span>Plano de carreira estruturado</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-editorial-charcoal">Requisitos Técnicos</h3>
+              <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                <div class="space-y-4">
+                  <div>
+                    <h4 class="font-semibold text-editorial-indigo mb-2">Fundamentos de Redes</h4>
+                    <p class="text-sm text-editorial-slate">TCP/IP, DNS, HTTP, protocolos de comunicação</p>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-indigo mb-2">Sistemas Operacionais</h4>
+                    <p class="text-sm text-editorial-slate">Linux e Windows, administração e segurança</p>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-indigo mb-2">Ferramentas de Pentest</h4>
+                    <p class="text-sm text-editorial-slate">Nmap, Burp Suite, Metasploit, SQLmap, Nikto</p>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-indigo mb-2">Frameworks de Segurança</h4>
+                    <p class="text-sm text-editorial-slate">OWASP Top 10 e MITRE ATT&amp;CK</p>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-indigo mb-2">Programação</h4>
+                    <p class="text-sm text-editorial-slate">Python, Bash ou PowerShell</p>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-4 text-editorial-charcoal">Diferenciais Desejáveis</h3>
+              <div class="space-y-3">
+                <div class="flex items-center text-sm text-editorial-slate">
+                  <i class="fas fa-trophy text-yellow-500 mr-3"></i>
+                  <span>Participação em competições CTF</span>
+                </div>
+                <div class="flex items-center text-sm text-editorial-slate">
+                  <i class="fas fa-flask text-blue-500 mr-3"></i>
+                  <span>Experiência em laboratórios de segurança</span>
+                </div>
+                <div class="flex items-center text-sm text-editorial-slate">
+                  <i class="fas fa-certificate text-green-500 mr-3"></i>
+                  <span>Certificações: eJPT, eWPT, CEH, OSCP</span>
+                </div>
+                <div class="flex items-center text-sm text-editorial-slate">
+                  <i class="fas fa-code text-purple-500 mr-3"></i>
+                  <span>Projetos pessoais ou contribuições em comunidades</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 bg-editorial-indigo bg-opacity-10 p-8 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4 text-editorial-charcoal">Candidatura</h3>
+            <p class="text-editorial-slate mb-4">Aplique através do portal Melhores Empregos:</p>
+            <a href="https://www.melhoresempregos.com/vaga/pentester-junior/remoto/245743/" target="_blank" class="inline-flex items-center bg-editorial-indigo text-white px-6 py-3 rounded-lg hover:bg-editorial-indigo/90 transition-colors">
+              <i class="fas fa-external-link-alt mr-3"></i>
+              Candidatar-se na Melhores Empregos
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solyd Pentester Position -->
+      <section id="pentester-solyd" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+          <div class="flex items-center mb-8">
+            <div class="w-16 h-16 bg-editorial-cyan rounded-full flex items-center justify-center mr-6">
+              <i class="fas fa-crosshairs text-white text-2xl"></i>
+            </div>
+            <div>
+              <h2 class="font-serif text-3xl font-bold text-editorial-charcoal">Pentester Júnior - Solyd Offensive Security / Guardsi Cybersecurity</h2>
+              <p class="text-editorial-slate">Especialização em segurança ofensiva e treinamentos avançados</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-editorial-charcoal">Detalhes da Posição</h3>
+              <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-editorial-cyan mb-1">R$5.000</div>
+                    <div class="text-sm text-editorial-slate">Remuneração mensal PJ</div>
+                  </div>
+                  <div class="text-center">
+                    <div class="text-2xl font-bold text-editorial-cyan mb-1">100%</div>
+                    <div class="text-sm text-editorial-slate">Remoto</div>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-4 text-editorial-charcoal">Oportunidades de Desenvolvimento</h3>
+              <div class="space-y-4">
+                <div class="border-l-4 border-editorial-cyan pl-4">
+                  <h4 class="font-semibold text-editorial-charcoal">Integração Especializada</h4>
+                  <p class="text-sm text-editorial-slate">Equipe exclusivamente focada em segurança ofensiva com especialistas renomados</p>
+                </div>
+                <div class="border-l-4 border-editorial-cyan pl-4">
+                  <h4 class="font-semibold text-editorial-charcoal">Projetos Reais</h4>
+                  <p class="text-sm text-editorial-slate">Experiência prática em avaliações de segurança para clientes diversificados</p>
+                </div>
+                <div class="border-l-4 border-editorial-cyan pl-4">
+                  <h4 class="font-semibold text-editorial-charcoal">Aprendizado Contínuo</h4>
+                  <p class="text-sm text-editorial-slate">Acesso a treinamentos internos e atualização técnica constante</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-editorial-charcoal">Perfil do Candidato Ideal</h3>
+              <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                <div class="space-y-4">
+                  <div>
+                    <h4 class="font-semibold text-editorial-indigo mb-2">Fundamentos Técnicos</h4>
+                    <ul class="text-sm text-editorial-slate space-y-1">
+                      <li>• Redes, protocolos e sistemas operacionais</li>
+                      <li>• Ambientes web e aplicações</li>
+                      <li>• OWASP e MITRE ATT&amp;CK</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-indigo mb-2">Experiência Prática</h4>
+                    <ul class="text-sm text-editorial-slate space-y-1">
+                      <li>• Ferramentas de pentesting</li>
+                      <li>• CTFs, laboratórios, bug bounty</li>
+                      <li>• CVEs ou projetos pessoais</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-indigo mb-2">Competências Comportamentais</h4>
+                    <ul class="text-sm text-editorial-slate space-y-1">
+                      <li>• Aprendizado contínuo</li>
+                      <li>• Trabalho em equipe</li>
+                      <li>• Comunicação técnica</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-editorial-cyan bg-opacity-10 p-6 rounded-lg">
+                <h3 class="text-lg font-semibold mb-3 text-editorial-charcoal">Parceria Guardsi Cybersecurity</h3>
+                <p class="text-sm text-editorial-slate mb-3">
+                  A parceria combina a especialização em segurança ofensiva da Solyd com as capacidades de segurança defensiva e gestão de riscos da Guardsi, criando um ecossistema completo de segurança cibernética.
+                </p>
+                <p class="text-sm text-editorial-slate">
+                  Profissionais são expostos a perspectivas de segurança defensiva, compreendendo como os achados de pentest se traduzem em prioridades de correção e controles de mitigação.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 bg-editorial-cyan bg-opacity-10 p-8 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4 text-editorial-charcoal">Candidatura</h3>
+            <p class="text-editorial-slate mb-4">Aplique através do portal Vacantes Digitales:</p>
+            <a href="https://vacantesdigitales.com/empleo-digital/seguridad/pentester-junior-remoto-brasil" target="_blank" class="inline-flex items-center bg-editorial-cyan text-white px-6 py-3 rounded-lg hover:bg-editorial-cyan/90 transition-colors">
+              <i class="fas fa-external-link-alt mr-3"></i>
+              Candidatar-se na Vacantes Digitales
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Threat Intelligence Position -->
+      <section id="threat-intelligence" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+          <div class="flex items-center mb-8">
+            <div class="w-16 h-16 bg-editorial-accent rounded-full flex items-center justify-center mr-6">
+              <i class="fas fa-brain text-white text-2xl"></i>
+            </div>
+            <div>
+              <h2 class="font-serif text-3xl font-bold text-editorial-charcoal">Junior Threat Intelligence Analyst - CTC</h2>
+              <p class="text-editorial-slate">Liderança em segurança cibernética com mais de 15 anos de experiência</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-editorial-charcoal">Descrição da Posição</h3>
+              <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                <p class="text-editorial-slate leading-relaxed mb-4">
+                  A CTC (Cyber Threat Control) busca um <strong>Junior Threat Intelligence Analyst</strong> para integrar sua equipe de inteligência, com foco em coleta, análise e produção de inteligência sobre ameaças cibernéticas.
+                </p>
+                <p class="text-editorial-slate leading-relaxed">
+                  A posição oferece exposição a operações de segurança em escala nacional, com acesso a dados de ameaças que poucas organizações no Brasil possuem, em um ambiente que enfatiza excelência técnica e inovação.
+                </p>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-4 text-editorial-charcoal">Áreas de Atuação</h3>
+              <div class="space-y-3">
+                <div class="flex items-start">
+                  <i class="fas fa-search text-editorial-accent mr-3 mt-1"></i>
+                  <div>
+                    <h4 class="font-semibold text-editorial-charcoal">Inteligência de Ameaças</h4>
+                    <p class="text-sm text-editorial-slate">Coleta e análise de dados sobre adversários e técnicas de ataque</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <i class="fas fa-chart-bar text-editorial-accent mr-3 mt-1"></i>
+                  <div>
+                    <h4 class="font-semibold text-editorial-charcoal">Análise de Risco</h4>
+                    <p class="text-sm text-editorial-slate">Avaliação de vulnerabilidades e impacto potencial</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <i class="fas fa-globe text-editorial-accent mr-3 mt-1"></i>
+                  <div>
+                    <h4 class="font-semibold text-editorial-charcoal">Monitoramento Global</h4>
+                    <p class="text-sm text-editorial-slate">Acompanhamento de tendências e emergências de segurança</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-editorial-charcoal">Requisitos e Competências</h3>
+              <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                <div class="space-y-4">
+                  <div>
+                    <h4 class="font-semibold text-editorial-indigo mb-2">Fundamentos Técnicos</h4>
+                    <ul class="text-sm text-editorial-slate space-y-1">
+                      <li>• Conhecimentos em redes e sistemas operacionais</li>
+                      <li>• Compreensão de malware e técnicas de ataque</li>
+                      <li>• Familiaridade com ferramentas de análise de ameaças</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-indigo mb-2">Análise e Pesquisa</h4>
+                    <ul class="text-sm text-editorial-slate space-y-1">
+                      <li>• Habilidade em coleta e processamento de dados</li>
+                      <li>• Pensamento analítico e crítico</li>
+                      <li>• Produção de relatórios técnicos</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-indigo mb-2">Idiomas</h4>
+                    <ul class="text-sm text-editorial-slate space-y-1">
+                      <li>• Inglês avançado (leitura e escrita técnica)</li>
+                      <li>• Espanhol diferencial</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-editorial-accent bg-opacity-10 p-6 rounded-lg">
+                <h3 class="text-lg font-semibold mb-3 text-editorial-charcoal">Vantagens da Posição</h3>
+                <div class="space-y-3">
+                  <div class="flex items-start">
+                    <i class="fas fa-university text-editorial-accent mr-3 mt-1"></i>
+                    <div>
+                      <h4 class="font-semibold text-sm text-editorial-charcoal">Ambiente de Aprendizado</h4>
+                      <p class="text-xs text-editorial-slate">Exposição a especialistas e tecnologias de ponta</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-network-wired text-editorial-accent mr-3 mt-1"></i>
+                    <div>
+                      <h4 class="font-semibold text-sm text-editorial-charcoal">Rede Profissional</h4>
+                      <p class="text-xs text-editorial-slate">Contato com clientes e parceiros estratégicos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-trophy text-editorial-accent mr-3 mt-1"></i>
+                    <div>
+                      <h4 class="font-semibold text-sm text-editorial-charcoal">Reconhecimento de Mercado</h4>
+                      <p class="text-xs text-editorial-slate">CTC é referência nacional em segurança cibernética</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 bg-editorial-accent bg-opacity-10 p-8 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4 text-editorial-charcoal">Candidatura</h3>
+            <p class="text-editorial-slate mb-4">
+              A CTC oferece oportunidades de estágio e posições júnior em inteligência de ameaças. Acompanhe as vagas disponíveis em seu portal de carreiras.
+            </p>
+            <div class="bg-white p-4 rounded-lg">
+              <p class="text-sm text-editorial-slate mb-2">
+                <strong>Observação:</strong> A vaga específica de Junior Threat Intelligence Analyst foi identificada em pesquisa de mercado. Recomendamos monitorar os canais oficiais da CTC para atualizações sobre oportunidades em aberto.
+              </p>
+              <p class="text-xs text-gray-500">
+                Fonte: Pesquisa de mercado em portais de emprego e sites de empresas de segurança brasileiras.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Market Analysis -->
+      <section id="market-analysis" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+          <h2 class="font-serif text-3xl font-bold mb-12 text-editorial-charcoal text-center">Análise do Mercado de Cibersegurança Brasileiro</h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+            <div>
+              <h3 class="text-xl font-semibold mb-6 text-editorial-charcoal">Tendências do Mercado</h3>
+              <div class="space-y-6">
+                <div class="border-l-4 border-editorial-indigo pl-6">
+                  <h4 class="font-semibold text-editorial-charcoal mb-2">Alta Demanda por Talentos</h4>
+                  <p class="text-editorial-slate text-sm leading-relaxed">
+                    O mercado brasileiro de cibersegurança enfrenta escassez de profissionais qualificados, impulsionando salários e oportunidades para juniores com potencial demonstrado.
+                  </p>
+                </div>
+                <div class="border-l-4 border-editorial-cyan pl-6">
+                  <h4 class="font-semibold text-editorial-charcoal mb-2">Flexibilidade de Trabalho</h4>
+                  <p class="text-editorial-slate text-sm leading-relaxed">
+                    O modelo remoto tornou-se padrão na indústria, permitindo acesso a oportunidades independentemente da localização geográfica no Brasil.
+                  </p>
+                </div>
+                <div class="border-l-4 border-editorial-accent pl-6">
+                  <h4 class="font-semibold text-editorial-charcoal mb-2">Foco em Certificações</h4>
+                  <p class="text-editorial-slate text-sm leading-relaxed">
+                    Empresas valorizam cada vez mais certificações práticas (OSCP, eJPT) e experiência demonstrada (CTFs, projetos pessoais) sobre formação acadêmica tradicional.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-6 text-editorial-charcoal">Comparativa de Vagas</h3>
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="font-semibold text-editorial-charcoal mb-3">IT4US Cyber Security</h4>
+                    <ul class="text-sm text-editorial-slate space-y-1">
+                      <li>• Faixa salarial: R$2.000-5.000 (PJ com possibilidade de CLT)</li>
+                      <li>• Benefícios abrangentes: saúde, alimentação, educação</li>
+                      <li>• Mais de 10 anos de experiência no mercado</li>
+                      <li>• Operações SOC integradas com pentest</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-charcoal mb-3">Solyd/Guardsi</h4>
+                    <ul class="text-sm text-editorial-slate space-y-1">
+                      <li>• Remuneração fixa: R$5.000 (PJ)</li>
+                      <li>• Foco exclusivo em segurança ofensiva</li>
+                      <li>• Especialização técnica avançada</li>
+                      <li>• Parceria estratégica para projetos integrados</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-charcoal mb-3">CTC</h4>
+                    <ul class="text-sm text-editorial-slate space-y-1">
+                      <li>• Liderança nacional em segurança cibernética</li>
+                      <li>• Mais de 15 anos de mercado</li>
+                      <li>• Acesso a dados de ameaças em escala nacional</li>
+                      <li>• Portfólio de clientes estratégicos</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-editorial-charcoal text-white p-8 rounded-lg">
+            <h3 class="text-xl font-semibold mb-4">Perspectivas para Profissionais Juniores</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <i class="fas fa-rocket text-editorial-cyan text-3xl mb-3"></i>
+                <h4 class="font-semibold mb-2">Crescimento Rápido</h4>
+                <p class="text-sm text-gray-300">Oportunidades de desenvolvimento acelerado em ambientes com especialistas experientes</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-exchange-alt text-editorial-cyan text-3xl mb-3"></i>
+                <h4 class="font-semibold mb-2">Mobilidade Vertical</h4>
+                <p class="text-sm text-gray-300">Planos de carreira estruturados com revisões periódicas e promoções baseadas em desempenho</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-globe text-editorial-cyan text-3xl mb-3"></i>
+                <h4 class="font-semibold mb-2">Perspectiva Internacional</h4>
+                <p class="text-sm text-gray-300">Experiência em segurança brasileira abre portas para oportunidades globais</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Application Guide -->
+      <section id="application-guide" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+          <h2 class="font-serif text-3xl font-bold mb-12 text-editorial-charcoal text-center">Guia de Candidatura</h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-xl font-semibold mb-6 text-editorial-charcoal">Preparação da Candidatura</h3>
+              <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                  <h4 class="font-semibold text-editorial-indigo mb-3">
+                    <i class="fas fa-file-alt mr-2"></i>Currículo Técnico
+                  </h4>
+                  <ul class="text-sm text-editorial-slate space-y-2">
+                    <li>• Destaque projetos pessoais e contribuições em comunidades</li>
+                    <li>• Inclua certificações relevantes e cursos concluídos</li>
+                    <li>• Mencione participação em CTFs e laboratórios de segurança</li>
+                    <li>• Mantenha perfis no GitHub, LinkedIn e plataformas de CTF atualizados</li>
+                  </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                  <h4 class="font-semibold text-editorial-cyan mb-3">
+                    <i class="fas fa-search mr-2"></i>Pesquisa da Empresa
+                  </h4>
+                  <ul class="text-sm text-editorial-slate space-y-2">
+                    <li>• Estude o portfólio de clientes e serviços oferecidos</li>
+                    <li>• Entenda a cultura organizacional e valores</li>
+                    <li>• Prepare perguntas relevantes sobre o dia a dia da posição</li>
+                    <li>• Demonstre conhecimento sobre desafios específicos do setor</li>
+                  </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                  <h4 class="font-semibold text-editorial-accent mb-3">
+                    <i class="fas fa-tools mr-2"></i>Preparação Técnica
+                  </h4>
+                  <ul class="text-sm text-editorial-slate space-y-2">
+                    <li>• Revise fundamentos de redes e sistemas operacionais</li>
+                    <li>• Pratique com ferramentas de pentest em laboratórios</li>
+                    <li>• Estude OWASP Top 10 e frameworks de segurança</li>
+                    <li>• Prepare exemplos concretos de resolução de problemas</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-6 text-editorial-charcoal">Processo Seletivo</h3>
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="w-8 h-8 bg-editorial-indigo rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span class="text-white text-sm font-bold">1</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-charcoal mb-2">Triagem de Currículo</h4>
+                    <p class="text-sm text-editorial-slate">Análise inicial de qualificação técnica e alinhamento com requisitos da vaga</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="w-8 h-8 bg-editorial-cyan rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span class="text-white text-sm font-bold">2</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-charcoal mb-2">Entrevista Técnica</h4>
+                    <p class="text-sm text-editorial-slate">Discussão de cenários, fundamentos técnicos e possíveis desafios práticos</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="w-8 h-8 bg-editorial-accent rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span class="text-white text-sm font-bold">3</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-charcoal mb-2">Entrevista Comportamental</h4>
+                    <p class="text-sm text-editorial-slate">Avaliação de soft skills, cultura organizacional e alinhamento de valores</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="w-8 h-8 bg-editorial-slate rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span class="text-white text-sm font-bold">4</span>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-editorial-charcoal mb-2">Validação e Proposta</h4>
+                    <p class="text-sm text-editorial-slate">Verificação de referências e apresentação da proposta de contratação</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
+                <h4 class="font-semibold text-yellow-800 mb-2">
+                  <i class="fas fa-lightbulb mr-2"></i>Dicas para Sucesso
+                </h4>
+                <ul class="text-sm text-yellow-700 space-y-1">
+                  <li>• Seja autêntico e demonstre paixão genuína pela área</li>
+                  <li>• Prepare exemplos concretos de desafios superados</li>
+                  <li>• Mostre disposição para aprendizado contínuo</li>
+                  <li>• Demonstre habilidade de comunicação técnica</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-editorial-charcoal text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+          <div class="text-center">
+            <h3 class="font-serif text-2xl font-bold mb-4">Oportunidades em Cibersegurança</h3>
+            <p class="text-gray-300 mb-6">Três caminhos para iniciar sua carreira em uma das áreas mais promissoras da tecnologia</p>
+            <div class="flex justify-center space-x-6">
+              <div class="text-center">
+                <i class="fas fa-shield-alt text-editorial-cyan text-2xl mb-2"></i>
+                <p class="text-sm">Pentesting</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-search text-editorial-cyan text-2xl mb-2"></i>
+                <p class="text-sm">Inteligência</p>
+              </div>
+              <div class="text-center">
+                <i class="fas fa-rocket text-editorial-cyan text-2xl mb-2"></i>
+                <p class="text-sm">Crescimento</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+        // Mobile TOC Toggle
+        const tocToggle = document.getElementById('toc-toggle');
+        const toc = document.getElementById('toc');
+        
+        tocToggle.addEventListener('click', () => {
+            toc.classList.toggle('-translate-x-full');
+        });
+
+        // Close TOC when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth < 1024 && !toc.contains(e.target) && !tocToggle.contains(e.target)) {
+                toc.classList.add('-translate-x-full');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile TOC after navigation
+                    if (window.innerWidth < 1024) {
+                        toc.classList.add('-translate-x-full');
+                    }
+                }
+            });
+        });
+    </script>
+  
+
+</body></html>
